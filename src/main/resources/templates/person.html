@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+</head>
+<body>
+
+<div align="center">
+    <h1>Person</h1>
+    <form th:object="${person}">
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Person ID: </td>
+                <td><input type="text" th:field="*{id}" readonly="readonly"/></td>
+            </tr>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" th:field="*{name}"/></td>
+            </tr>
+            <tr>
+                <td>Age: </td>
+                <td><input type="text" th:field="*{age}"/></td>
+            </tr>
+            <tr>
+                <td>E-mail: </td>
+                <td><input type="text" th:field="*{email}"/></td>
+            </tr>
+            <tr>
+                <a href="/people">Go to All People</a>
+            </tr>
+        </table>
+    </form>
+
+</div>
+
+</body>
+</html>
